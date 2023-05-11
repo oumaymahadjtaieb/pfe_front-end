@@ -1,3 +1,4 @@
+import { ILoginTemplate } from "./controller/ILoginTemplate"
 import { UserController } from "./controller/UserController"
 
 export const Routes = [{
@@ -20,4 +21,11 @@ export const Routes = [{
     route: "/users/:id",
     controller: UserController,
     action: "remove"
-}]
+},
+{
+    method: 'get',
+    route: '/login',
+    controller: ILoginTemplate,
+    action: 'get'
+}
+]

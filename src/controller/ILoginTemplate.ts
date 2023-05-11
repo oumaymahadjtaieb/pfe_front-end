@@ -1,11 +1,11 @@
 import {Request, Response} from "express";
 
-class ILoginTemplate {
+export class ILoginTemplate {
     constructor() {
     }
 
     get(request: Request, response: Response) {
-        response.render('interfaces/login.twig');
+        response.render('public/interfaces/login.twig');
     }
     post () {
         
