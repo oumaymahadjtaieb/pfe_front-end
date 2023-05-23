@@ -1,4 +1,5 @@
 import { ILoginTemplate } from "./controller/ILoginTemplate"
+import { ISignupTemplate } from "./controller/ISignupTemplate"
 import { UserController } from "./controller/UserController"
 
 export const Routes = [{
@@ -27,5 +28,11 @@ export const Routes = [{
     route: '/login',
     controller: ILoginTemplate,
     action: 'get'
-}
+},
+{
+    method: 'post',
+    route: '/signup',
+    controller: ISignupTemplate,
+    action: 'get'
+},
 ]

@@ -1,0 +1,79 @@
+{% extends '../../template.twig' %}
+{% block main %}
+    <div class="min-height-300 bg-primary position-absolute w-100"></div>
+  <main class="main-content max-height-vh-100 h-100">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl ">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          
+        </nav>
+        
+      </div>
+    </nav>
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-lg-9 col-12 mx-auto">
+          <div class="card card-body mt-4">
+            <h6 class="mb-0">New Event</h6>
+            <p class="text-sm mb-0">Create your event </p>
+            <hr class="horizontal dark my-3">
+            <label for="projectName" class="form-label">Event Name</label>
+            <input type="text" class="form-control" id="projectName">
+            <div class="row mt-4">
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label>
+                    Online Event
+                  </label>
+                  
+                  <div class="form-check form-switch ms-1">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="notify(this)" data-type="warning" data-content="Once a project is made private, you cannot revert it to a public project." data-title="Warning" data-icon="ni ni-bell-55">
+                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="mt-4">Event Description</label>
+            <p class="form-text text-muted text-xs ms-1">
+              This is how others will learn about the event, so make it good!
+            </p>
+            <div id="editor">
+              <p>Hello World!</p>
+              <p>Some initial <strong>bold</strong> text</p>
+              <p><br></p>
+            </div>
+            <label class="mt-4 form-label">Project Tags</label>
+            <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" multiple>
+              <option value="Choice 1" selected>Choice 1</option>
+              <option value="Choice 2">Choice 2</option>
+              <option value="Choice 3">Choice 3</option>
+              <option value="Choice 4">Choice 4</option>
+            </select>
+            <div class="row">
+              <div class="col-6">
+                <label class="form-label">Start Date</label>
+                <input class="form-control datetimepicker" type="text" placeholder="Please select start date" data-input>
+              </div>
+              <div class="col-6">
+                <label class="form-label">End Date</label>
+                <input class="form-control datetimepicker" type="text" placeholder="Please select end date" data-input>
+              </div>
+            </div>
+            <label class="mt-4 form-label">Add Pictures for your event </label>
+            <form action="/file-upload" class="form-control dropzone" id="dropzone">
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+            </form>
+               
+  </div>
+            <div class="d-flex justify-content-end mt-4">
+              <button type="button" name="button" class="btn btn-light m-0">Cancel</button>
+              <button type="button" name="button" class="btn bg-gradient-primary m-0 ms-2">Create Event</button>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      </main> 
+{% endblock %}  
