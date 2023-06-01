@@ -1,0 +1,242 @@
+{% extends '../../template.twig' %}
+{% block main %}
+<body class="g-sidenav-show   bg-gray-100">
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
+  
+  <main class="main-content position-relative border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg  px-0 mx-4 shadow-none border-radius-xl z-index-sticky " id="navbarBlur" data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm">
+             
+            </li>
+           
+          </ol>
+          
+        </nav>
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
+          <a href="javascript:;" class="nav-link p-0">
+            
+          </a>
+        </div>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Type here...">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="d-sm-flex justify-content-between">
+        <div>
+          
+        </div>
+        <div class="d-flex">
+          <div class="dropdown d-inline">
+            <a href="javascript:;" class="btn btn-outline-white dropdown-toggle " data-bs-toggle="dropdown" id="navbarDropdownMenuLink2">
+              Filters
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3" aria-labelledby="navbarDropdownMenuLink2" data-popper-placement="left-start">
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Status: Paid</a></li>
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Status: Refunded</a></li>
+              <li><a class="dropdown-item border-radius-md" href="javascript:;">Status: Canceled</a></li>
+              <li>
+                <hr class="horizontal dark my-2">
+              </li>
+              <li><a class="dropdown-item border-radius-md text-danger" href="javascript:;">Remove Filter</a></li>
+            </ul>
+          </div>
+          <button class="btn btn-icon btn-outline-white ms-2 export" data-type="csv" type="button">
+            <span class="btn-inner--icon"><i class="ni ni-archive-2"></i></span>
+            <span class="btn-inner--text">Export CSV</span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="table-responsive">
+              <table class="table table-flush" id="datatable-search">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Participant</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="customCheck1">
+                        </div>
+                        <p class="text-xs font-weight-bold ms-2 mb-0">#10421</p>
+                      </div>
+                    </td>
+                    <td class="font-weight-bold">
+                      <span class="my-2 text-xs">1 Nov, 10:20 AM</span>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-check" aria-hidden="true"></i></button>
+                        <span>Paid</span>
+                      </div>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <img src="../../../assets/img/team-2.jpg" class="avatar avatar-xs me-2" alt="user image">
+                        <span>Orlando Imieto</span>
+                      </div>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <span class="my-2 text-xs">Naaaaaa@gmail.com/span>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <span class="my-2 text-xs">55226633</span>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="customCheck3">
+                        </div>
+                        <p class="text-xs font-weight-bold ms-2 mb-0">#10423</p>
+                      </div>
+                    </td>
+                    <td class="font-weight-bold">
+                      <span class="my-2 text-xs">1 Nov, 11:13 AM</span>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <button class="btn btn-icon-only btn-rounded btn-outline-dark mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-undo" aria-hidden="true"></i></button>
+                        <span>Refunded</span>
+                      </div>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar avatar-xs me-2 bg-gradient-dark">
+                          <span>M</span>
+                        </div>
+                        <span>Michael Mirra</span>
+                      </div>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <span class="my-2 text-xs">
+                        iiiiiii@gmail.com
+                        
+                      </span>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <span class="my-2 text-xs">22556677</span>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="customCheck5">
+                        </div>
+                        <p class="text-xs font-weight-bold ms-2 mb-0">#10425</p>
+                      </div>
+                    </td>
+                    <td class="font-weight-bold">
+                      <span class="my-2 text-xs">1 Nov, 1:40 PM</span>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-times" aria-hidden="true"></i></button>
+                        <span>Canceled</span>
+                      </div>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img src="../../../assets/img/team-4.jpg" class="avatar avatar-xs me-2" alt="user image">
+                          <span>Sebastian Koga</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <span class="my-2 text-xs">
+                        pppppppppp@gmail.com
+                       
+                      </span>
+                    </td>
+                    <td class="text-xs font-weight-bold">
+                      <span class="my-2 text-xs">23546987</span>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+{% endblock %}  
+{% block scripts %}
+{{super()}}
+<!--   Core JS Files   -->
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <!-- Kanban scripts -->
+  <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+  <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+  <script src="../../../assets/js/plugins/datatables.js"></script>
+  <script>
+    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
+      searchable: true,
+      fixedHeight: false,
+      perPageSelect: false
+    });
+
+    document.querySelectorAll(".export").forEach(function(el) {
+      el.addEventListener("click", function(e) {
+        var type = el.dataset.type;
+
+        var data = {
+          type: type,
+          filename: "soft-ui-" + type,
+        };
+
+        if (type === "csv") {
+          data.columnDelimiter = "|";
+        }
+
+        dataTableSearch.export(data);
+      });
+    });
+  </script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../../assets/js/argon-dashboard.min.js?v=2.0.5"></script>
+  {% endblock %}  

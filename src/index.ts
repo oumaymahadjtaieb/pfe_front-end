@@ -62,7 +62,7 @@ AppDataSource.initialize().then(async () => {
     })
 
     app.get('/', (req, res) => {
-        res.render('public/interfaces/speaker.twig');
+        res.render('public/interfaces/dashbord.twig');
     });
     app.listen(3000);
 

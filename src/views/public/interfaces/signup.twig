@@ -1,21 +1,30 @@
-{% extends '../../template.twig' %}
+{% extends '../../public.twig' %}
 {% block main %}
-   
-    <main class="main-content main-content-bg mt-0">
-    <div class="page-header min-vh-100" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-basic.jpg');">
+    <main class="main-content main-content-bg">
+    <div class="page-header min-vh-100" style="background-image: url('/img/1.jpg');">
       <span class="mask bg-gradient-dark opacity-6"></span>
-      <div class="container">
+      <div class="container-fluid mt-5">
         <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-7">
+          <div class="col-lg-9 col-md-12">
             <div class="card z-index-0">
               <div class="card-header text-center pt-4">
                 <h5>Register with</h5>
               </div>
               <div class="row px-xl-5 px-sm-4 px-3">
-                <div class="col-3 ms-auto px-1">
-                  
+                <div class="d-flex justify-content-center">
+                <div class="ms-auto px-1">
+                  <a class="btn btn-outline-light w-100" href="javascript:;">
+                    <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
+                          <circle fill="#3C5A9A" cx="29.5091719" cy="29.4927506" r="29.4882047"></circle>
+                          <path d="M39.0974944,9.05587273 L32.5651312,9.05587273 C28.6886088,9.05587273 24.3768224,10.6862851 24.3768224,16.3054653 C24.395747,18.2634019 24.3768224,20.1385313 24.3768224,22.2488655 L19.8922122,22.2488655 L19.8922122,29.3852113 L24.5156022,29.3852113 L24.5156022,49.9295284 L33.0113092,49.9295284 L33.0113092,29.2496356 L38.6187742,29.2496356 L39.1261316,22.2288395 L32.8649196,22.2288395 C32.8649196,22.2288395 32.8789377,19.1056932 32.8649196,18.1987181 C32.8649196,15.9781412 35.1755132,16.1053059 35.3144932,16.1053059 C36.4140178,16.1053059 38.5518876,16.1085101 39.1006986,16.1053059 L39.1006986,9.05587273 L39.0974944,9.05587273 L39.0974944,9.05587273 Z" fill="#FFFFFF"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
                 </div>
-                <div class="col-3 px-1">
+                <div class="px-1">
                   <a class="btn btn-outline-light w-100" href="javascript:;">
                     <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -29,8 +38,9 @@
                     </svg>
                   </a>
                 </div>
-                <div class="col-3 me-auto px-1">
+                <div class="me-auto px-1">
                   
+                </div>
                 </div>
                 <div class="mt-2 position-relative text-center">
                   <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
@@ -39,26 +49,26 @@
                 </div>
               </div>
               <div class="card-body">
-                <form role="form">
-                  <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="First Name" aria-label="First_name">
+                <form role="form" class="row">
+                  <div class="mb-3 col-md-6 col-sm-12">
+                    <input type="text" class="form-control" placeholder="First Name" aria-label="First_name" name= "First Name">
                   </div>
-                  <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Last_name">
+                  <div class="mb-3 col-md-6 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Last_name" name= "Last Name">
                   </div>
-                  <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Phone Number" aria-label="tel">
+                  <div class="mb-3 col-md-6 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Phone Number" aria-label="tel" name = "Phone Number">
                   </div>
-                  <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Address" aria-label="Address">
+                  <div class="mb-3 col-md-6 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Address" aria-label="Address" name ="Address">
                   </div>
-                  <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                  <div class="mb-3 col-md-6 col-sm-12">
+                    <input type="email" class="form-control" placeholder="Email" aria-label="Email"name ="Email">
                   </div>
-                  <div class="mb-3">
-                    <input type="password" class="form-control" placeholder="Password" aria-label="Password">
+                  <div class="mb-3 col-md-6 col-sm-12">
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" name ="Password">
                   </div>
-                  <div class="form-check form-check-info text-start">
+                  <div class="form-check form-check-info text-start ">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                     <label class="form-check-label" for="flexCheckDefault">
                       I agree the <a href="javascript:;" class="text-dark font-weight-bolder">Terms and Conditions</a>
@@ -76,6 +86,7 @@
       </div>
     </div>
   </main>
+ 
 {% endblock %}
 
 {% block scripts %}
